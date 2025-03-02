@@ -1,1 +1,94 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import url(../../common/modern-reset.css);
+@import url(../../common/a11y.css);
+
+:root {
+  --base-font-size: 16px;
+  --base-color: #121212;
+  --focus-color: #24388d;
+}
+
+body {
+  font-size: var(--base-font-size);
+  color: var(--base-color);
+}
+
+.brand {
+  text-align: center;
+  margin: 20px 0;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  height: 45px;
+  border: 1px solid #dadada;
+  background-color: #fff;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #03cf5d;
+  background-color: #e9f0fd;
+}
+
+a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #03cf5d;
+  border: none;
+  margin-top: 20px;
+}
+
+label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="checkbox"]#keep_logged_in {
+  width: 24px;
+  height: 24px;
+  background-image: url("unchecked.svg");
+  background-size: contain;
+}
+
+input[type="checkbox"]#keep_logged_in:checked {
+  background-image: url("checked.svg");
+}
+
+@media (max-width: 767px) {
+  form {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+
+  #ip_security {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    width: 500px;
+  }
+}
